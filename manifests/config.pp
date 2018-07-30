@@ -195,7 +195,7 @@ class rabbitmq::config {
 
   case $facts['os']['family'] {
     'Debian': {
-      if versioncmp($facts['os']['release']['full'], '16.04') >= 0 {
+      if versioncmp($facts['os']['release']['full'], '9') >= 0 {
         file { '/etc/systemd/system/rabbitmq-server.service.d':
           ensure                  => directory,
           owner                   => '0',
